@@ -1,6 +1,14 @@
-stage('Terraform') {
-    steps {
-        sh 'chmod +x script.sh'
-        sh './script.sh'
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Terraform') {
+            steps {
+                sh 'chmod +x script.sh'
+                sh './script.sh'
+            }
+        }
+
     }
 }

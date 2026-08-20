@@ -1,14 +1,15 @@
 pipeline {
-    agent any
-
+    agent {label 'dev'}
     stages {
-
-        stage('Terraform') {
+        stage('Hello') {
             steps {
-                sh 'chmod +x script.sh'
-                sh './script.sh'
+                echo 'Hello World'
             }
         }
-
-    }
+		stage('Hi) {
+			steps {
+				echo "Hi Ashish"
+				}
+			}
+	}
 }

@@ -1,15 +1,17 @@
 pipeline {
-    agent {label 'dev'}
+    agent { label 'dev' }
+
     stages {
         stage('Hello') {
             steps {
                 echo 'Hello World'
             }
         }
-		stage('Hi) {
-			steps {
-				echo "Hi Ashish"
-				}
-			}
-	}
+
+        stage('Hi') {
+            steps {
+                echo 'Hi Ashish'
+            }
+        }
+    }
 }
